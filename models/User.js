@@ -1,6 +1,4 @@
 const { Schema, model } = require("mongoose");
-// importing function from utils folder for the timestamp
-const dateFormat = require("../utils/dateFormat");
 
 const UserSchema = new Schema(
   {
