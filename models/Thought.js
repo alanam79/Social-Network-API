@@ -2,8 +2,38 @@ const { Schema, model } = require("mongoose");
 // importing function from utils folder for the timestamp
 const dateFormat = require("../utils/dateFormat");
 
-// schema only reaction
-const ReactionSchema = new Schema();
+// Reaction -> schema only
+const ReactionSchema = new Schema(
+  {
+    reactionId: {
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
+    },
+    reactionBody: {
+      type: String,
+      required: "You must enter a reaction between 1 and 280 characters!",
+      minLength: 1,
+      maxLength: 280,
+    },
+    username: {
+      type: String,
+      required: "You must enter a username!",
+    },
+    createdAt: {
+      type: Date,
+      //   if no value is provided, this function will execute and provide a timestamp
+      default: Date.now,
+      // a getter, this takes stored data and modifies/formats upon return, in this case using the dateFormat() function
+      get: (createdAtVal) => dateFormat(createdAtVal),
+    },
+  },
+  {
+    toJSON: {
+      // tell the schema it will use getters
+      getters: true,
+    },
+  }
+);
 
 const ThoughtSchema = new Schema(
   {
@@ -24,6 +54,7 @@ const ThoughtSchema = new Schema(
       type: String,
       required: "You must enter a username!",
     },
+    // associate replies with comments by nesting into this schema
     reactions: [ReactionSchema],
   },
   {
