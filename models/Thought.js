@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 // importing function from utils folder for the timestamp
 const dateFormat = require("../utils/dateFormat");
 
@@ -54,7 +54,7 @@ const ThoughtSchema = new Schema(
       type: String,
       required: "You must enter a username!",
     },
-    // associate replies with comments by nesting into this schema
+    // associate reactions with thoughts by nesting into this schema
     reactions: [ReactionSchema],
   },
   {
