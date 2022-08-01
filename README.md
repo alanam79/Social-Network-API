@@ -37,6 +37,11 @@
   [![4.jpg](https://i.postimg.cc/j5CxjF3f/4.jpg)](https://postimg.cc/Q9GG403N)
   
   ## Videos
+  * Start application: https://vimeo.com/735522250/3e4a408349
+  * User Routes: https://vimeo.com/735522626/49e1078a75
+  * Thought Routes: https://vimeo.com/735523324/d208f4ef55
+  * Reaction Routes: https://vimeo.com/735524822/a26f33550b
+  * Friend Routes: https://vimeo.com/735525626/5dc88f5e17  
 
   ## Questions
   For additional questions and/or information, please go to the creator's Github at: github.com/https://github.com/alanam79, or email alanarmckeel@gmail.com.
