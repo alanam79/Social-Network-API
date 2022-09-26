@@ -13,6 +13,7 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Technologies](#technologies)
   * [Website](#website)
   * [Screenshots](#screenshots)
   * [Videos](#videos)
@@ -26,6 +27,9 @@
   * Run `npm start` to launch server or add below to the "script" section of package.json and use npm run watch.
   
   `"watch": "nodemon server.js"`
+  
+  ## Technologies
+  * MongoDB
 
   # Website
   https://github.com/alanam79/Social-Network-API
